@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add Map</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+  <h3>My Google Maps Demo</h3>
+  <!--The div element for the map -->
+  <div id="map" style="height: 400px; width: 100%;">
+  </div>
+  
+
+  <!-- 
+    The `defer` attribute causes the callback to execute after the full HTML
+    document has been parsed. For non-blocking uses, avoiding race conditions,
+    and consistent behavior across browsers, consider loading using Promises
+    with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBriMZuz7nMQwcBQhAPE5L031hWL7YdY0&callback=initMap&v=beta"></script>
+    <script>
+      let map;
+      //@ts-ignore
+      let featureLayer;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lng: 18.068, lat: 59.329 },
+          zoom: 12,
+          // In the cloud console, configure this Map ID with a style that enables the
+          // "Locality" feature layer.
+          mapId: "aebb566326d9c7ba", // <YOUR_MAP_ID_HERE>,
+        });
+        //@ts-ignore
+        featureLayer = map.getFeatureLayer("LOCALITY");
+
+        // Define a style with purple fill and border.
+        //@ts-ignore
+        const featureStyleOptions = {
+          strokeColor: "#810FCB",
+          strokeOpacity: 1.0,
+          strokeWeight: 3.0,
+          fillColor: "#810FCB",
+          fillOpacity: 0.5,
+        };
+
+        // Apply the style to a single boundary.
+        //@ts-ignore
+        featureLayer.style = (options) => {
+          if (options.feature.placeId == "ChIJ-c-ToVl5j4ARugCgukRgqYM") {
+            // sweden
+            return featureStyleOptions;
+          }
+        };
+      }
+
+      window.initMap = initMap;
+
+
+    </script>
+</body>
+</html>

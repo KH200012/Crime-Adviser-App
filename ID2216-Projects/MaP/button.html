@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function button(){
+            document.getElementById("demo").innerHTML="hello world";
+        }
+        function leavebutton(){
+            document.getElementById("demo").innerHTML ="press it!";
+        }
+    </script>
+</head>
+<body>
+    <h1>this is button demo</h1>
+    <p id = "demo">button</p>
+    <button type="button" onmouseover="button()" onmouseleave="leavebutton()">press it!</button>
+    <script>
+        document.write(Date());
+       
+    </script>
+    <script>
+        var array = new Array();
+        array[0] = "a";
+        array[1] = "b";
+        var i ;
+        for(i=0;i<2;i++){
+            document.write(array[i]+"<br>");
+        }
+        
+    </script>
+    <br>
+    <p id = "class">test</p>
+    <script>
+        var me = {
+            xing : "kang",
+            ming : "heng",
+            printname : function(){
+                document.write(this.xing+" "+this.ming);
+            }
+
+        }
+        document.getElementById("test").innerHTML= me.printname();
+    </script>
+    <p></p>
+    
+    
+</body>
+</html>

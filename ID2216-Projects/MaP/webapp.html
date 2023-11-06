@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            margin: 0;
+            
+            text-decoration: none;
+            
+
+            list-style: none;
+        }
+        .header{
+            background-color: black;
+            padding: 20px;
+            color:orange;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
+            
+
+        }
+        .dropbox{
+            width: 80px;
+            height: 80px;
+            float: left;
+           
+            
+
+        }
+        .dropbox:hover .droplist{
+            display: block;
+
+        }
+        .dropbt{
+            width: 120px;
+            height:80px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 80px;
+            margin-top: 15px;
+            
+            
+        }
+        .droplist{
+            box-shadow: 0 1px 2px #222;
+            width: 100px;
+            background-color: #ccc;
+            display: none;
+            padding: 0;
+        }
+        .droplist li{
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            
+            
+            
+        }
+
+        .droplist a:hover{
+            background-color: orange;
+        }
+        .droplist a{
+            display: block;
+        }
+
+
+    </style>
+    <title>AdivsiorMap</title>
+</head>
+<body>
+    <div class="header">
+      <img src="CrimeAdvisor_V3_cropped.png" alt="logo" style="width:100px;height:100px;float: right;" >    <span style="font-size: 80px;">Crime Adviser</span>
+      <div class="dropbox">
+        <div class="dropbt" >menu</div>
+            
+        <ul class="droplist" >
+            <li><a href="#" >About APP</a></li>
+            <li><a href="#">Introductions</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+        
+        
+      </div>
+
+    
+    </div>
+    <div align="center">
+    <img src="mapofstockholm_demo.png" alt="safetymap" usemap="#safety"></div>
+    <map name="safety">
+        <!--Bromma-->
+        <area shape="poly" coords="176,372,230,329,233,304,257,311,276,278,316,285,396,393,362,497,272,460,234,430"
+        href="button.html">
+
+
+
+    </map>
+
+    
+</body>
+</html>

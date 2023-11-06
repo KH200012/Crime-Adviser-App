@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    
+    <title>AdivsiorMap</title>
+  </head>
+
+<body>
+  <div class="header">
+    <img src="CrimeAdvisor_V3_cropped.png" alt="logo" style="width:100px;height:100px;float: right;" >    <span style="font-size: 80px;">Crime Adviser</span>
+    <div class="dropbox">
+      <div class="dropbt" >menu</div>
+          
+      <ul class="droplist" >
+        <li><a href="#" >About APP</a></li>
+        <li><a href="#" >Year</a>
+            <ul>
+              <li ><p class = "tab" id="2015" onclick="clickTab(this)" >2015</p></li>
+              <li ><p class = "tab" id="2016" onclick="clickTab(this)" >2016</p></li>
+              <li ><p class = "tab" id="2017" onclick="clickTab(this)">2017</p></li>
+              <li ><p class = "tab" id="2018" onclick="clickTab(this)">2018</p></li>
+              <li ><p class = "tab" id="2019" onclick="clickTab(this)">2019</p></li>
+              <li ><p class = "tab" id="2020" onclick="clickTab(this)">2020</p></li>
+              <li ><p class = "tab" id="2021" onclick="clickTab(this)">2021</p></li>
+              <li ><p class = "tab" id="2022" onclick="clickTab(this)">2022</p></li>
+            </ul>
+        </li>
+        <li><a href="#">Introductions</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <input type="file" id="excel_file"/>
+  </div>
+    <!--The div element for the map -->
+    <div id="map" class="content"></div>
+
+    <!-- The div for the diagram -->
+    <div id="chart" class="divcss5-right">
+      <!-- <form id="graph_info">
+        <label for="district_index">District (0 - 13):</label><br>
+        <input type="number" id="district_index" name="district_index" min="0" max="13"><br>
+        <label for="year_index">Year (0 - 7):</label><br>
+        <input type="number" id="year_index" name="year_index" min="0" max="7"><br><br>
+        <input type="button" id="submit_btn" value="Submit">
+      </form> -->
+
+      <div id="display_graph" ></div>
+
+    </div>
+
+  </body>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBriMZuz7nMQwcBQhAPE5L031hWL7YdY0&callback=initMap&v=beta"></script>
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="text/javascript" src="./JS/coordinates.js"></script>
+  <script type="text/javascript" src="./JS/globalVariables.js"></script>
+  <script type="text/javascript" src="./JS/menu.js"></script>
+  <script type="text/javascript" src="./JS/markerClick.js"></script>
+  <!-- <script type="text/javascript" src="./JS/initialMap.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script type="text/javascript" src="./JS/excelReader.js"></script>
+  <script type="text/javascript" src="./JS/drawGraph.js"></script>
+  <script type="text/javascript" src="./JS/activefake.js"></script>
+  
+</html>

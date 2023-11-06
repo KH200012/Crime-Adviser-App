@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    background-color: black;
+    padding: 20px;
+    color:orange;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+.dropbox{
+    width: 80px;
+    height: 80px;
+    float: left;
+    z-index: 1;
+}
+.dropbox:hover .droplist{
+    display: block;
+}
+.dropbt{
+    width: 120px;
+    height:80px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 80px;
+    margin-top: 15px;
+}
+.droplist{
+    box-shadow: 0 1px 2px #222;
+    width: 100px;
+    background-color: #ccc;
+    display: none;
+    padding: 0;
+    z-index: 1;
+}
+.droplist li{
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+}
+.droplist a:hover{
+    background-color: orange;
+    z-index: 1;
+}
+.droplist a{
+    display: block;
+    z-index: 1;
+}
+
+.droplist p{
+    display: block;
+    z-index: 1;
+    color: black;
+    
+}
+.droplist li ul{
+      width: 50px;
+      border: 1px solid;
+      position: absolute;
+      left: 100px;
+      top:0px;
+      text-align: center;
+      display: none;
+      z-index: 1;
+  }
+.droplist li:hover ul{
+    display: block;
+    z-index: 1;
+}
+
+.tab:hover{
+    background-color: orange;
+    z-index: 1;
+    opacity: 1;
+}
+
+
+.tab:active{
+    background-color: green;
+   
+   z-index: 1;
+   opacity: 1; 
+}
+
+.tab.active{
+    background-color: green;}
+
+.divcss5-left{
+    width: 1100px; 
+    height:1000px; 
+    border:1px solid #0000; 
+    float:left
+}
+.divcss5-right{
+    width: 1100px; 
+    height:1000px; 
+    border:1px solid #0000; 
+    float:right;
+    display: none;
+}
+#left,#right {
+    float:left;
+    border:1px solid red;
+    padding:10px;
+}
+.content {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    background: yellowgreen;
+}
